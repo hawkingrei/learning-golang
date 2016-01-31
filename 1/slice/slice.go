@@ -17,8 +17,18 @@ func main() {
 		fmt.Print(v, " ")
 	}
 	fmt.Println()
-	mySlice1 := make([]int, 5)
-	fmt.println(mySlice1)
-	mySlice2 := make([]int, 10)
-	fmt.println(mySlice2)
+	mySlice1 := make([]int, 5, 10)
+	fmt.Println(mySlice1)
+	mySlice2 := make([]int, 10, 20)
+	fmt.Println(mySlice2)
+	mySlice3 := [3]int{1, 2, 3}
+	fmt.Println(mySlice3)
+
+	for i := 0; i < len(mySlice); i++ {
+		fmt.Println("mySlice[", i, "] =", mySlice[i])
+	}
+	fmt.Println("===============================")
+	for ii, vv := range mySlice {
+		fmt.Println("mySlice[", ii, "] =", vv)
+	}
 }
