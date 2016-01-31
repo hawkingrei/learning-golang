@@ -22,4 +22,15 @@ func main() {
 	} else {
 		fmt.Println("Did not find person with ID 1234.")
 	}
+
+	myMap := make(map[string]PersonInfo)
+	//myMap = make(map[string] PersonInfo,100)
+	myMap = map[string]PersonInfo{"1234": PersonInfo{"1", "jask", "room01,..."}}
+	myMap["1234"] = PersonInfo{"1", "jask", "room01,..."}
+	fmt.Println(myMap)
+	delete(myMap, "1234")
+	value, ok := myMap["1234"]
+	if ok {
+		fmt.Println(value)
+	}
 }
